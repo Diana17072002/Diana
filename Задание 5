@@ -1,0 +1,33 @@
+public class Task1 {
+private static String wrongText;
+private static String rigthText;
+ 
+public Task1(String wrongText) {
+this.wrongText = wrongText;
+}
+ 
+public String correctError() {
+int position = wrongText.indexOf("p");
+if (position < wrongText.length() - 1
+&& wrongText.charAt(position + 1) == 'a') {
+rigthText = wrongText.replace("a", "o");
+}
+return rigthText;
+}
+ 
+public static void printWrongText() {
+System.out.println("Wrong text: "+wrongText);
+}
+ 
+public static void printRigthText() {
+System.out.println("Rigth text: "+rigthText);
+}
+ 
+public static void main(String[] args) {
+Task1 task = new Task1("swimming paol");
+task.correctError();
+printWrongText();
+printRigthText();
+}
+ 
+}
