@@ -1,0 +1,26 @@
+class Самолет
+{
+   private string маршрут = null;
+   private void начать_полет()
+   {
+   }
+   public Крыло левое_крыло;
+   public Крыло правое_крыло;
+   public Шасси (Chassis chassis){
+        this.chassis = chassis;
+}
+   public bool летать()
+   {
+      if (маршрут == null) return false;
+      начать_полет();
+      return true;
+   }
+   public void задать_маршрут(string новый_маршрут);
+   {
+       маршрут = новый_маршрут;
+   }
+   public void вывести_маршрут()
+   {
+      Console.WriteLine(маршрут);
+   }
+}
